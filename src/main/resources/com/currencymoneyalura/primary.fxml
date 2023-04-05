@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.currencymoneyalura.CurrencyConverter.Controller">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="434.0" prefWidth="1200.0" style="-fx-background-color: #0E2A47;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="586.0" layoutY="201.0" prefHeight="67.0" prefWidth="1200.0" text="Currency Converter" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="418.0" prefWidth="1200.0">
+               <children>
+                  <ImageView fx:id="loader" fitHeight="75.0" fitWidth="75.0" layoutX="563.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/loader.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="148.0" layoutY="260.0" prefHeight="289.0" prefWidth="894.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30; -fx-border-style: 30;" AnchorPane.bottomAnchor="254.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="158.0" AnchorPane.topAnchor="255.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <VBox prefHeight="177.0" prefWidth="894.0" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="179.0" prefWidth="894.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="175.0" spacing="5.0">
+                           <children>
+                              <Label text="Amount">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inpAmount" prefHeight="45.0" prefWidth="200.0" promptText="Enter Amount" style="-fx-background-color: #FFFFFF; -fx-border-color: #B5B5B5; -fx-background-radius: 10px;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="175.0" spacing="5.0">
+                           <children>
+                              <Label text="From">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="drpFrom" prefHeight="45.0" prefWidth="200.0" promptText="Select From Country" style="-fx-background-color: #FFFFFF; -fx-border-color: #B5B5B5; -fx-background-radius: 10px;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="50.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="106.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnSwap" mnemonicParsing="false" onAction="#convert" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 200px; -fx-border-radius: 200px; -fx-border-color: #B5B5B5;">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Images/replace.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="175.0" spacing="5.0">
+                           <children>
+                              <Label text="To">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="drpTo" prefHeight="45.0" prefWidth="200.0" promptText="Select To Country" style="-fx-background-color: #FFFFFF; -fx-border-color: #B5B5B5; -fx-background-radius: 10px;" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="outVbox" layoutY="178.0" prefHeight="118.0" prefWidth="565.0">
+               <children>
+                  <Label fx:id="fromOut" prefHeight="17.0" prefWidth="603.0" text="1 USD =" />
+                  <Label fx:id="toOut" prefHeight="36.0" prefWidth="602.0" text="1.00 PEN">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="exchRate" fill="#8d8d8d" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="135.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets top="35.0" />
+               </opaqueInsets>
+            </VBox>
+            <Button fx:id="btnConvert" layoutX="673.0" layoutY="210.0" mnemonicParsing="false" onAction="#convert" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #0071EB;" text="Convert" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
