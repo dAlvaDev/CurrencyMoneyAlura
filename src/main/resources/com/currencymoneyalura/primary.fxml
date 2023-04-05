@@ -20,7 +20,7 @@
          <children>
             <AnchorPane prefHeight="434.0" prefWidth="1200.0" style="-fx-background-color: #0E2A47;">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="586.0" layoutY="201.0" prefHeight="67.0" prefWidth="1200.0" text="Currency Converter" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="586.0" layoutY="201.0" prefHeight="67.0" prefWidth="1200.0" text="Conversor de Divisas" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -49,22 +49,22 @@
                      <children>
                         <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="175.0" spacing="5.0">
                            <children>
-                              <Label text="Amount">
+                              <Label text="Cantidad">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="inpAmount" prefHeight="45.0" prefWidth="200.0" promptText="Enter Amount" style="-fx-background-color: #FFFFFF; -fx-border-color: #B5B5B5; -fx-background-radius: 10px;" />
+                              <TextField fx:id="inpAmount" prefHeight="45.0" prefWidth="200.0" promptText="Ingrese el monto" style="-fx-background-color: #FFFFFF; -fx-border-color: #B5B5B5; -fx-background-radius: 10px;" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="175.0" spacing="5.0">
                            <children>
-                              <Label text="From">
+                              <Label text="Divisa inicial">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="drpFrom" prefHeight="45.0" prefWidth="200.0" promptText="Select From Country" style="-fx-background-color: #FFFFFF; -fx-border-color: #B5B5B5; -fx-background-radius: 10px;" />
+                              <ComboBox fx:id="drpFrom" prefHeight="45.0" prefWidth="200.0" promptText="Seleccione país de" style="-fx-background-color: #FFFFFF; -fx-border-color: #B5B5B5; -fx-background-radius: 10px;" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="50.0">
@@ -87,12 +87,12 @@
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="175.0" spacing="5.0">
                            <children>
-                              <Label text="To">
+                              <Label text="Divisa Final">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="drpTo" prefHeight="45.0" prefWidth="200.0" promptText="Select To Country" style="-fx-background-color: #FFFFFF; -fx-border-color: #B5B5B5; -fx-background-radius: 10px;" />
+                              <ComboBox fx:id="drpTo" prefHeight="45.0" prefWidth="200.0" promptText="Seleccione país a " style="-fx-background-color: #FFFFFF; -fx-border-color: #B5B5B5; -fx-background-radius: 10px;" />
                            </children>
                         </VBox>
                      </children>
@@ -104,7 +104,7 @@
             </VBox>
             <VBox fx:id="outVbox" layoutY="178.0" prefHeight="118.0" prefWidth="565.0">
                <children>
-                  <Label fx:id="fromOut" prefHeight="17.0" prefWidth="603.0" text="1 USD =" />
+                  <Label fx:id="fromOut" prefHeight="17.0" prefWidth="603.0" text="1 PEN =" />
                   <Label fx:id="toOut" prefHeight="36.0" prefWidth="602.0" text="1.00 PEN">
                      <font>
                         <Font size="25.0" />
@@ -123,7 +123,7 @@
                   <Insets top="35.0" />
                </opaqueInsets>
             </VBox>
-            <Button fx:id="btnConvert" layoutX="673.0" layoutY="210.0" mnemonicParsing="false" onAction="#convert" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #0071EB;" text="Convert" textFill="WHITE" />
+            <Button fx:id="btnConvert" layoutX="673.0" layoutY="210.0" mnemonicParsing="false" onAction="#convert" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #0071EB;" text="Convertir" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>
