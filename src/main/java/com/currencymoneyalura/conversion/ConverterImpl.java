@@ -15,6 +15,7 @@ public class ConverterImpl implements Converter{
 
     private WebClient webClient;
     private HtmlPage page;
+
     @Override
     public Output convert(TKCurrency from, TKCurrency to) {
         String url = "https://www.xe.com/currencyconverter/convert/?Amount=" + from.getAmount() + "&From="

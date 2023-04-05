@@ -58,12 +58,11 @@ public class Controller implements Initializable{
     @FXML
     private AnchorPane root;
 
-    // Conversion
     private ConverterImpl converterImpl;
     private Output outPut;
 
     @Override
-    public void initialize(URL url, ResourceBundle resource) {
+    public void initialize(URL location, ResourceBundle resources) {
         converterImpl = new ConverterImpl();
         Set<TKCurrency> currList = converterImpl.getAllCurrencies();
         drpFrom.getItems().addAll(currList);
@@ -73,6 +72,7 @@ public class Controller implements Initializable{
         root.setDisable(false);
     }
 
+    @SuppressWarnings("exports")
     public void convert(ActionEvent actionEvent) {
         boolean isAmountOk = false, isFromCurrOk = false, isToCurrOk = false;
 

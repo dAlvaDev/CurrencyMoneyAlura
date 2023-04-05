@@ -17,6 +17,7 @@ public class TKCurrency {
     public String getUnit() {
         return unit;
     }
+
     public void setUnit(String unit) {
         this.unit = unit;
     }
@@ -24,6 +25,7 @@ public class TKCurrency {
     public double getAmount() {
         return amount;
     }
+
     public void setAmount(double amount) {
         this.amount = amount;
     }
